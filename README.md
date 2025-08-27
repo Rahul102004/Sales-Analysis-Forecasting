@@ -76,6 +76,25 @@ python -m uvicorn app:app --reload
 
 The API will be available at `http://localhost:8000`
 
+## Streamlit Demo
+
+For a user-friendly web interface, run the Streamlit demo:
+
+```bash
+streamlit run demo.py
+```
+
+The demo will be available at `http://localhost:8501`
+
+**Features:**
+- Interactive file upload interface
+- Direct integration with ProphetForecaster (no API required)
+- Beautiful visualizations with Plotly
+- Sample data generation for testing
+- Download predictions as JSON
+- Responsive design with custom styling
+- Model availability checking
+
 ## API Documentation
 
 Once the server is running, visit `http://localhost:8000/docs` for interactive Swagger UI documentation.
