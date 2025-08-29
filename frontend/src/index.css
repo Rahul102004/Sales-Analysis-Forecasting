@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root { height: 100%; }
+
+body { @apply bg-navy2 text-textPrimary font-inter; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #18264e; border-radius: 10px; }
+::-webkit-scrollbar-track { background: #0c1737; }
+
+/* sidebar hover indicator */
+.nav-item {
+  position: relative;
+}
+.nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: transparent;
+  border-radius: 9999px;
+  transition: background .2s, height .2s;
+}
+.nav-item:hover::before,
+.nav-item.active::before {
+  background: #36D0E4;
+  height: 24px;
+}
+/* card style */
+.card {
+  @apply rounded-2xl shadow-card bg-[#0d1a3a]/80 border border-[#1f2a4a];
+}
+.badge {
+  @apply text-xs font-semibold rounded-md px-2 py-1;
+}
+.badge-green {
+  color: #b7f3c2;
+  background: rgba(112,200,57,0.15);
+  border: 1px solid rgba(112,200,57,0.35);
+}
+.badge-red {
+  color: #f7c3c0;
+  background: rgba(231,76,60,0.12);
+  border: 1px solid rgba(231,76,60,0.35);
+}
+
+kbd.kpi { @apply text-4xl font-extrabold; }
+
+/* tiny tooltip style */
+.tooltip {
+  @apply absolute -translate-x-1/2 -translate-y-12 bg-[#0a1533] border border-[#1f2a4a] rounded-lg px-3 py-2 text-sm shadow-card;
+}

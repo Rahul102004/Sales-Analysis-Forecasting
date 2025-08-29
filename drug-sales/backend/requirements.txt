@@ -1,0 +1,6 @@
+Flask
+pandas
+prophet
+scikit-learn
+gunicorn # for production
+flask-cors
